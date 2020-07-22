@@ -28,8 +28,17 @@ on a cluster using AWS.
 ## schema design 
 ![Tux, the Linux mascot](img/schema_design.png)
 
+## project files
+### etl.py
+This script retrives songs and log data from a s3 bucket, 
+transforms the data into a fact and dimension tables. Then load the 
+table data back to s3 as parquest files 
+
+### dl.cfg
+config file for all AWS token and key
+
 ## Run
 
-
+    pip install -r requirements.txt
     python etl.py
 
